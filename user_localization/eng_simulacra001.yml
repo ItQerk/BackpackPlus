@@ -1,0 +1,294 @@
+# Custom eng.yml made by: TinyFusion (simulacra001)
+
+# Message when the backpack starts to be loaded from the database (after player interaction)
+backpack-loading: "<#eb0000>Backpack loading in progress..."
+# Message when the backpack has been loaded
+backpack-loaded: "<white>The backpack was loaded"
+# Message when the backpack is updating and the player tries to open it
+backpack-updating: "<white>Updating the backpack in progress"
+# Message when the backpack could not be loaded
+backpack-loading-error: "<red>Problem encountered during backpack loading"
+# When a player tries to open a backpack, but it is being used by another player
+backpack-is-used-by-another-player: "<red>The backpack is used by another player"
+
+# Message when admin changes crafting
+backpack-crafting-change: "<#f2e8cf>The selected backpack crafting recipe has been <#a5C756>successfully <#f2e8cf>updated."
+# Message when a player tries to change crafting when it is empty or the same as before
+backpack-crafting-cannot-change: "<red>The crafting of the backpack cannot be changed, perhaps it is empty or is the same"
+# Message when admin cancels crafting changes
+backpack-crafting-change-cancelled: "<red>Backpack crafting changes cancelled"
+
+# Message after the backpack has been added by the player's backpack view
+# %player% Name of backpack owner
+backpack-added-inventory: "<gold>Added player's backpack<dark_gray>: <white>%player% <gold>to your inventory"
+
+# If a player has no permissions
+command-no-permissions: "<dark_red>You do not have the permissions to use this command"
+# When a player has a cooldown
+cooldown-message: "<#eb0000>You must wait before using it again"
+# When a player is not authorised to open a backpack
+backpack-no-permission-use: "<dark_red>You do not have the permissions to open the backpack"
+# When the player's backpack recharges (using the command)
+loading-in-progress: "<gold>Loading in progress... please wait a moment"
+# When players' backpacks could not be loaded
+players-backpack-not-loaded: "<red>Player's backpacks could not be loaded"
+# When the player does not have any backpack
+player-not-created-backpacks: "<gray>This player has not created any backpacks yet"
+# When the player is offline
+# %player% > Player Name
+player-is-offline: "<gray>Player<dark_gray>: <white>%player% <gray> is offline"
+
+# Message when a player tries to have more backpacks than one (only if option in config is set to true: limit-backpack-per-inventory)
+one-backpack-per-inventory: "<red>You can only carry one backpack"
+
+# Message when a player tries to have more backpacks than x(limit-backpack-per-inventory-amount) (only if the option in the configuration is set to true: limit-backpack-per-inventory).
+multiple-backpack-per-inventory: "<red>You can only carry %amount% backpacks"
+
+# Message when player tries to put item in container when it's locked
+blocked-backpack-insert-message: "<red>You can't put this item here!"
+
+# Message when resourcepack is loaded leave blank if there is to be no message
+resourcepack-loaded: "<gold>Resourcepack has been loaded"
+# Message when resourcepack fails to load leave blank if there is to be no message
+resourcepack-failed-load: "<gold>Failed to load resourcepack"
+
+# Message if the command is only for the player
+command-only-player: "<red>This argument can only be used by a player!"
+# Message if the command is only for the console
+command-only-console: "<red>This argument can only be used by a console!"
+
+# Message when uuid is invalid
+invalid-uuid: "<red>Incorrect UUID"
+
+# Message when the item was blocked, %item% is the name of the material
+item-has-blocked: "<gold>The Item has been blocked<dark_gray>: <white>%item%"
+
+# Message when the given item is already blocked
+item-already-blocked: "<red>Item already blocked<dark_gray>: <white>%item%"
+
+# Message when the material was blocked, %item% is the name of the material
+material-has-blocked: "<gold>The Material has been blocked<dark_gray>: <white>%material%"
+# Message when the given material is already blocked
+material-already-blocked: "<red>Material already blocked<dark_gray>: <white>%material%"
+# Message when given material is incorrect
+invalid-material: "<red>Invalid Material Name<dark_gray>: <white>%material%"
+# Message when player has empty hands
+empty-hand: "<red>You must have something in your hand"
+
+# Message when backpack tier is incorrect, %tier% is the given value
+invalid-backpack-tier: "<red>Invalid Backpack Tier<dark_gray>: <white>%tier%"
+
+# Message when a player adds a backpack, %tier% is the tier of the backpack
+backpack-added: "<gold>Backpack<dark_gray>: <white>%tier% <gold>Added"
+
+# Message when a backpack was added to a player, %tier% is the tier of the backpack, %player% is the name of the player
+backpack-added-player: "<gold>Backpack<dark_gray>: <white>%tier%  <gold>Added to player<dark_gray>: <white>%player%"
+# Message when a backpack of the specified tier has not been found
+backpack-tier-not-found: "<red>Backpack<dark_gray>: <white>%tier% <red>not found"
+
+# Message when no players have created backpacks yet or something has gone wrong
+players-not-created-backpacks: "No player has created a backpack yet or something has gone wrong"
+
+# Message when an unexpected error occurs
+unexpected-error: "<red>An unexpected error occurred during command execution, check console for errors."
+
+# Message when resourcepack is reloaded with command
+resourcepack-reloaded: "<gold>Resourcepack has been updated and reloaded with all players"
+
+# Message when plugin is reloaded with command
+plugin-reloaded: "<dark_gray>[<yellow>BackpackPlus<dark_gray>] <dark_green>Plugin Reloaded"
+
+# A message when a player tries to put an item in a backpack that is not permitted type FILTERED
+filtered-backpack-item-not-allowed: "<red>You can't put this item in this backpack"
+
+# Message when a player tries to click a button on a menu, and it has a cooldown
+button-cooldown: "<red>You must wait another <white>%time% <red>seconds before clicking again "
+
+# Message when someone else has already edited the allowed items for this backpack
+allowed-items-gui-has-editor: "<red>Someone is already editing the allowed items for this backpack"
+
+# Message when failed to open gui of allowed items
+allowed-items-could-open: "<red>Cannot open Allowed items, check the console and check the config for this backpack to see if they are correct"
+
+# Message when player is not the owner of the backpack
+not-owner: "<red>You are not the owner of this backpack!"
+
+# Message when a player tries to create a backpack with a non-empty container
+crafting.blocked-filled-container: "<dark_red>You cannot craft using filled containers!"
+
+
+# GUI Configuration
+#
+# Conditional Operators Guide:
+# This plugin supports conditional expressions in text using these formats:
+#
+# STANDARD CONDITIONALS: %[(condition)text]%
+#    - Shows 'text' if condition is true, otherwise shows nothing
+#    - Used for: pagination, optional elements
+#
+# TERNARY CONDITIONALS: %[(condition)true_text ~: false_text]%
+#    - Shows 'true_text' if condition is true, otherwise shows 'false_text'
+#    - Uses ~: as separator to avoid conflicts with colons in text
+#    - Used for: status indicators, type switching
+#
+# EXAMPLES FROM THIS CONFIG:
+#   Pagination: "%[(max_pages > 1)<red>Page<dark_gray>: <gold>%page% <dark_gray>/ <gray>%max_pages%]%"
+#   Crafting status: "%[(isCraftable == true)<dark_gray>[<dark_green><bold>✔<dark_gray>] ~: <dark_gray>[<red><bold>❌<dark_gray>]]%"
+#   Enable/disable: "%[(isCraftable == true)disable ~: enable]%"
+#   Type switching: "%[(type == DEFAULT)FILTERED ~: DEFAULT]%"
+#
+# OPERATORS USED IN THIS CONFIG:
+#   >  (greater than)     Example: max_pages > 1
+#   == (equals)           Example: isCraftable == true, type == DEFAULT
+
+
+# Config made by: TinyFusion (simulacra001)
+gui:
+  # Title format for allowed items GUI - shows pagination when multiple pages exist
+  allowed-items-gui: "<red>Allowed items<dark_gray>: <white>%size% <red>Backpack Tier<dark_gray>: <white>%tier% %[(max_pages > 1)<red>Page<dark_gray>: <gold>%page% <dark_gray>/ <gray>%max_pages%]%"
+
+  # Main backpack settings interface
+  backpack-settings-main:
+    title: '<gold>Tier<dark_gray>: <white>%tier% <gold>backpack settings'
+    buttons:
+      # Button for editing crafting recipes
+      edit-crafting-button:
+        display-name: "<dark_green>Click to change crafting"
+        lore:
+          - "<white>Can be crafted<dark_gray>: %[(isCraftable == true)<dark_gray>[<dark_green><bold>✔<dark_gray>] ~: <dark_gray>[<red><bold>❌<dark_gray>]]%"
+          - " "
+          - "<gray>Click <white><bold>LMB <reset><gray>To Edit crafting"
+          - "<gray>Click <white><bold>SHIFT + RMB <reset><gray>to %[(isCraftable == true)disable ~: enable]% ability to craft a backpack"
+
+      # Button for managing allowed items list
+      allowed-items-button:
+        display-name: "<dark_green>Click to edit allowed items"
+        lore:
+          - "<gray>Currently allowed items for this backpack are<dark_gray>: <red>%size%"
+          - " "
+          - "<gray>Click <white><bold>LMB <reset><gray>To open the gui with allowed items"
+          - " "
+          - "<dark_gray>Includes these items if the backpack has the <white>FILTERED <dark_gray>type"
+
+      # Button for changing backpack type between DEFAULT and FILTERED
+      change-backpack-type-button:
+        display-name: "<dark_green>Click to edit backpack type"
+        lore:
+          - "<gray>The current type of backpack is<dark_gray>: <red>%type%"
+          - " "
+          - "<gray>Click <white><bold>LMB <reset><gray>To change the type to<dark_gray>: <white>%[(type == DEFAULT)FILTERED ~: DEFAULT]%"
+
+  # GUI for selecting which backpack to modify crafting
+  backpack-chose-crafting-gui:
+    title: "<#0047F7>Select a backpack to edit"
+    buttons:
+      # Individual backpack selection button
+      select-backpack-button:
+        lore:
+          - "<white>Can be crafted<dark_gray>: %[(isCraftable == true)<dark_gray>[<dark_green><bold>✔<dark_gray>] ~: <dark_gray>[<red><bold>❌<dark_gray>]]%"
+
+  backpack-chose-recipe-gui:
+    title: "<#0047F7>Select a backpack for which the recipe should be displayed"
+    buttons:
+      select-backpack-button:
+        lore:
+          - "<white>Click on a backpack to display its recipe"
+
+  backpack-view-recipe-gui:
+    title: "<#0047F7>You are viewing the recipe for backpack<dark_gray>: %backpack_name%"
+    buttons:
+      back-to-menu:
+        name: "<white>Click to go back to menu"
+
+  # GUI showing all backpacks owned by a specific player
+  player-backpacks-gui:
+    title: "<red>Player backpacks<dark_gray>: <white>%playerName% %[(max_pages > 1)<red>Page<dark_gray>: <gold>%page% <dark_gray>/ <gray>%max_pages%]%"
+    # Tooltip information shown when hovering over backpack items
+    hover-text:
+      - "<dark_gray>▪ <white>Backpack Owner<white>: <gold>%owner%"
+      - "<dark_gray>▪ <white>Last Update<white>: <green>%lastUpdated%"
+      - "<dark_gray>▪ <white>Last Player<white>: <green>%lastPlayer%"
+      - "<dark_gray>▪ <white>Backpack Id<white>: <green>%backpackUUID%"
+
+  # Player information display in backpack overview
+  player-backpack-gui-info:
+    displayName: "<gold>%playerName%"
+    lore:
+      - "<white>Owned Backpacks<dark_gray>: <gold>%amount%"
+      - "<gray>Click <white><bold>LMB <reset><gray>To open the player backpacks menu"
+
+  # GUI showing all players who own backpacks
+  all-backpack-gui:
+    title: "<red>All players with backpacks<dark_gray>: <red>Page<dark_gray>: <gold>%page%"
+
+  # GUI for editing crafting recipes
+  crafting-edit-gui:
+    title: "<#194d33>You are changing the crafting %crafting%"
+    buttons:
+      cancel:
+        display-name: "<#b80000><bold>Cancel"
+      confirm:
+        display-name: "<#008b02><bold>Confirm"
+
+
+# NBT Items Configuration
+# Settings for custom NBT items that can be used in backpacks
+nbt:
+  # Template for displaying custom NBT items
+  nbt-item:
+    displayName: "<white>Custom NBT Item"
+    lore:
+      - "<dark_gray>» <gray>Plugin Name<dark_gray>: <white>%plugin%"
+      - "<dark_gray>» <gray>Namespace<dark_gray>: <white>%namespace%"
+      - "<dark_gray>» <gray>Namespace Value: <white>%value%"
+
+items:
+  # Database backpack information display
+  # Used when viewing backpack details in admin/database interfaces
+  database-backpack-info:
+    lore:
+      - "<dark_gray>▪ <white>Backpack Owner<dark_gray>: <gold>%owner%"           # Shows who owns this backpack
+      - "<dark_gray>▪ <white>Id<dark_gray>: <gray>%backpackUUID%"                # Unique identifier for the backpack
+      - "<dark_gray>▪ <white>Last Update<dark_gray>: <green>%lastUpdate%"        # When the backpack was last modified
+      - "<dark_gray>▪ <white>Last Player<dark_gray>: <green>%lastPlayer%"        # Last player who interacted with it
+      - " "                                                                      # Empty line for spacing
+      - "<gray>Click <white><bold>LMB <reset><gray>To open the backpack"         # Left click action
+      - "<gray>Click <white><bold>RMB <reset><dark_gray><bold>+ <white><bold>SHIFT <reset><gray>To add a backpack to your inventory"  # Right click + shift action
+
+  database-backpack-no-settings:
+    display-name: "<red>⚠ Unconfigured Backpack"
+    lore:
+      - "<dark_gray>▪ <white>Owner<dark_gray>: <gold>%owner%"
+      - "<dark_gray>▪ <white>ID<dark_gray>: <gray>%backpackUUID%"
+      - "<dark_gray>▪ <white>Last Update<dark_gray>: <green>%lastUpdate%"
+      - "<dark_gray>▪ <white>Last Player<dark_gray>: <green>%lastPlayer%"
+      - " "
+      - "<red>⚠ <gray>Missing tier settings<dark_gray>: <yellow>%tier%"
+      - "<red>⚠ <gray>Backpack requires configuration"
+
+command-usage:
+  header: "<dark_blue><strikethrough>--------------------<reset><yellow><bold>Backpack<gray><bold>Plus<reset><dark_blue><strikethrough>--------------------"
+  # /backpack crafting | permission: backpackplus.admin.crafting
+  backpack-crafting: "<dark_gray>/<white>backpack <aqua>crafting <dark_gray>- <blue>Opens GUI with crafting backpacks."
+  # /backpack backpacks <player> | permission: backpackplus.admin.view.backpacks
+  backpack-backpacks: "<dark_gray>/<white>backpack <aqua>backpacks <gray><<white>online player <gray>| <white>player uuid<gray>> <dark_gray>- <blue>Displays all backpacks created by a given player."
+  # /backpack players | permission: backpackplus.admin.view.backpacks
+  backpack-players: "<dark_gray>/<white>backpack <aqua>players <dark_gray>- <blue>Displays all players who have created backpacks."
+  # /backpack resourcepack | permission: backpackplus.command.resourcepack
+  backpack-resourcepack: "<dark_gray>/<white>backpack <aqua>resourcepack <dark_gray>- <blue>Reloads resourcepack for client."
+  # /backpack resourcepack reload | permission: backpackplus.admin.resourcepack.reload
+  backpack-resourcepack-reload: "<dark_gray>/<white>backpack <aqua>resourcepack reload <dark_gray>- <blue>Reloads resourcepack on the server."
+  # /backpack reload | permission: backpackplus.admin.reload
+  backpack-reload: "<dark_gray>/<white>backpack <aqua>reload <dark_gray>- <blue>Reloads configs"
+  # /backpack give | permission: backpackplus.admin.give.backpacks
+  backpack-give: "<dark_gray>/<white>backpack <aqua>give <gray><<aqua>tier<gray>> <gray>[<<white>player<gray>>] <dark_gray>- <blue>Adds a backpack to you or the specified player"
+  # /backpack settings | permission: backpackplus.admin.settings
+  backpack-settings: "<dark_gray>/<white>backpack <aqua>settings <gray><<aqua>tier<gray>> <dark_gray>- <blue>Opens backpack settings"
+  # /backpack block | permission: backpackplus.admin.block
+  backpack-block: "<dark_gray>/<white>backpack <aqua>block <gray><<white>hand <gray>| <white>name<gray>> <gray>[<<white>material name<gray>>] <dark_gray>- <blue>Adds item to list of blocked items"
+  # /backpack recipes | permission: backpackplus.view.recipes
+  backpack-recipes: "<dark_gray>/<white>backpack <aqua>recipes <dark_gray>- <blue>Shows backpack recipes"
+  footer: "<dark_blue><strikethrough>--------------------<reset><yellow><bold>Backpack<gray><bold>Plus<reset><dark_blue><strikethrough>--------------------"
+
+# Message sent when a player tries to open their backpack during combat.
+cannot-use-in-combat: "<red>You cannot use your backpack during combat!"

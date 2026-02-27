@@ -1,0 +1,425 @@
+#Custom config.yml made by: TinyFusion (simulacra001)
+
+# All languages are in the folder: localization, to add a language simply duplicate an already existing one and rename it
+language: "eng"
+# Shows debug logs (may spam)
+debug: false
+# To enable cache logs, 'debug' must be set to true, otherwise they will not be visible anyway
+cache-logs: false
+
+# Should inactive backpacks be automatically removed from the database
+remove-inactive-backpacks: false
+# Number of days before inactive backpacks are deleted from the database
+remove-inactive-backpacks-days: 30
+
+# Log management configuration
+log-cleanup-hours: 10              # Hours after which old ACTIVE log files are deleted (default: 10h)
+log-zip-inactive-hours: 1          # Hours of inactivity before ZIP on server restart (default: 1h)
+log-delete-zip-days: 1             # Days after which old ZIP files are deleted (default: 1 day)
+log-compress: true                 # Compress logs before deletion (saves disk space)
+log-separate-files: false          # Separate files per level (info.log, warn.log, etc.)
+log-debug: false                   # Enable DEBUG logging to file
+show-debug-logs: false             # Show DEBUG in console (requires log-debug: true)
+
+# ADVANCE
+# After what time (in seconds) the backpack is not used, it is to be deleted from memory.
+backpacks-idle-cache-clear: 1800
+# After what time (in seconds) the player's backpack gui is not used, it is to be deleted from memory.
+player-backpacks-gui-idle-cache-clear: 120
+# Every how many seconds to be checked
+cache-clear-frequency: 10
+
+# https://colors-picker.com/hex-color-picker/
+# From this page you can take the color hex, of course you can from other pages.
+# You can also use regular colors e.g. <dark_green>
+Gui:
+  # Colours available:
+  # White,
+  # Red,
+  # Orange,
+  # Pink,
+  # Yellow,
+  # Lime,
+  # Green,
+  # Light_Blue,
+  # Cyan,
+  # Blue,
+  # Magenta,
+  # Purple,
+  # Brown,
+  # Gray,
+  # Light_Gray,
+  # Black
+  #
+  # This is for the lower Blank Stained Glass Pane at the ex buttons:
+  # [BTN] [x] [x] [x] [x] [x] [x] [x] [BTN]
+  filling:
+    custom-model:
+      # Whether it should use a custom item
+      use: false
+      # Custom Model Material
+      material: "MAP"
+      # Custom Model Id
+      custom-model-id: 810001
+    button:
+      color: "Black"
+      # Should it glow
+      glow: false
+    display-name: " "
+    # Whether the tooltip should be hidden
+    hide-tooltip: true
+
+  overfill:
+    custom-model:
+      # Whether it should use a custom item
+      use: false
+      # Custom Model Material
+      material: "MAP"
+      # Custom Model Id
+      custom-model-id: 810001
+    button:
+      color: "Black"
+      # Should it glow
+      glow: false
+    display-name: " "
+    # Whether the tooltip should be hidden
+    hide-tooltip: true
+
+  page-next:
+    custom-model:
+      # Should the next page button be as a custom model if it is on false will be used head player
+      use: true
+      # Custom Model Material
+      material: "MAP"
+      # Custom Model Id
+      custom-model-id: 810003
+    display-name: "<dark_green><bold>→"
+    # Whether the tooltip should be hidden
+    hide-tooltip: false
+
+  page-previous:
+    custom-model:
+      # Should the next page button be as a custom model if it is on false will be used head player
+      use: true
+      # Custom Model Material
+      material: "MAP"
+      # Custom Model Id
+      custom-model-id: 810002
+    display-name: "<red><bold>←"
+    # Whether the tooltip should be hidden
+    hide-tooltip: false
+
+# Default values for backpack placeholders
+backpack-placeholders-defaults:
+  backpack-owner-name: "<#1cc2f6>n/a"
+  # <amount> = amount of specific item
+  # <name> = material or custom item name
+  content-lore-template: "<#f9c100><amount>x <#dadada><name>"
+
+# Time in milliseconds, 1 second = 1000 milliseconds
+backpack-cooldown: 1000
+
+# Set to true if it should return items after canceling a crafting change
+return-items-on-close: true
+
+# Should there be sound when rearranging items in the backpack
+play-song-when-item-moved-in-backpack: true
+
+#  ██████╗░███████╗░██████╗░█████╗░██╗░░░██╗██████╗░░█████╗░███████╗██████╗░░█████╗░░█████╗░██╗░░██╗
+#  ██╔══██╗██╔════╝██╔════╝██╔══██╗██║░░░██║██╔══██╗██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔══██╗██║░██╔╝
+#  ██████╔╝█████╗░░╚█████╗░██║░░██║██║░░░██║██████╔╝██║░░╚═╝█████╗░░██████╔╝███████║██║░░╚═╝█████═╝░
+#  ██╔══██╗██╔══╝░░░╚═══██╗██║░░██║██║░░░██║██╔══██╗██║░░██╗██╔══╝░░██╔═══╝░██╔══██║██║░░██╗██╔═██╗░
+#  ██║░░██║███████╗██████╔╝╚█████╔╝╚██████╔╝██║░░██║╚█████╔╝███████╗██║░░░░░██║░░██║╚█████╔╝██║░╚██╗
+#  ╚═╝░░╚═╝╚══════╝╚═════╝░░╚════╝░░╚═════╝░╚═╝░░╚═╝░╚════╝░╚══════╝╚═╝░░░░░╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝
+# Link to your resourcepack with your own backpacks
+# remember that customModelId corresponds to the id of the backpack
+# If you want to add a backpack model remember to add it to brown_dye.json in the server resourcepack
+
+# You can also download the resourcepack and change it: https://www.dropbox.com/scl/fi/rtx4hkfaxh3fzl2meg7ju/BackpackPlus_resourcepack_1_19_x-beyond.zip?rlkey=jp3jxtn4qdgzyq7yqqk1bg98p&st=tooq0mtd&dl=1
+#
+# If you have your own resourcepack then upload it
+# https://mc-packs.net/
+#
+# Download URL:
+resource-pack-url: "https://www.dropbox.com/scl/fi/rtx4hkfaxh3fzl2meg7ju/BackpackPlus_resourcepack_1_19_x-beyond.zip?rlkey=jp3jxtn4qdgzyq7yqqk1bg98p&st=tooq0mtd&dl=1"
+# SHA-1 Hash:
+resource-pack-hash: "2d56276eb36465a60070dd5a670fc3fbdf1a9d0a"
+# If you are using server resourcepack set this to false
+# Just remember to add the texture and model of the backpack
+use-resource-pack: false
+
+# If the player does not accept the resourcepack, then if the value is on true it will be discarded
+force-resource-pack: true
+resource-pack-message:
+  - "<bold><dark_gray>[<gold>To play you must accept the server resourcepack<bold><dark_gray>]"
+
+# If you change this backpacks will use players' heads instead of resourcepack
+use-skulls-backpack: true
+
+
+#  ██████╗░░█████╗░░█████╗░██╗░░██╗██████╗░░█████╗░░█████╗░██╗░░██╗░██████╗
+#  ██╔══██╗██╔══██╗██╔══██╗██║░██╔╝██╔══██╗██╔══██╗██╔══██╗██║░██╔╝██╔════╝
+#  ██████╦╝███████║██║░░╚═╝█████═╝░██████╔╝███████║██║░░╚═╝█████═╝░╚█████╗░
+#  ██╔══██╗██╔══██║██║░░██╗██╔═██╗░██╔═══╝░██╔══██║██║░░██╗██╔═██╗░░╚═══██╗
+#  ██████╦╝██║░░██║╚█████╔╝██║░╚██╗██║░░░░░██║░░██║╚█████╔╝██║░╚██╗██████╔╝
+#  ╚═════╝░╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═════╝░
+
+# Block the possibility of having more than the set number(limit-backpack-per-inventory-amount) of backpacks in the inventory
+limit-backpack-per-inventory: false
+# Determines how many backpacks a player can have in inventory, must be enabled: limit-backpack-per-inventory
+limit-backpack-per-inventory-amount: 1
+
+# Whether to prevent opening backpacks when interacting with interactive blocks like chests, doors, beds, etc.
+block-interaction-blocks-prevent-backpack-open: true
+
+# Whether to require permissions for a player to use backpacks (different for each tier)
+permissions-to-use-backpack: true
+# Whether the craft of the backpack is to require the appropriate permission
+crafting-backpack-requires-permission: true
+
+# Should it block the possibility of placing backpacks in containers
+block-backpack-insert-containers: false
+# https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html
+blocked-containers:
+  - HOPPER
+  - CHEST
+  - ENDER_CHEST
+  - LOOM
+  - SHULKER_BOX
+  - BARREL
+  - DISPENSER
+  - DROPPER
+  - CRAFTER
+  - SMOKER
+  - BLAST_FURNACE
+  - FURNACE
+
+# Should placing bundles in backpacks be possible?
+allow-bundles-in-backpacks: false
+
+# Should the player be able to open their backpack during combat?
+# Works only if the DeluxeCombat plugin is installed.
+allow-open-backpacks-in-combat: false
+
+# If this option is set to true, player heads will be loaded in the GUI, while if it is set to false, default heads (Steve) will be used
+use-basic-player-heads-gui: true
+
+# Crafting Slots:
+# [1] [2] [3]
+# [4] [5] [6]
+# [7] [8] [9]
+# To be able to set a different gui title add: "gui-title:" under "displayName:"
+# Possible parameters to add to the "gui-title":
+#   - %page% -> current page
+#   - %max_pages% -> Number of total pages.
+# type: DEFAULT | FILTERED(You can only put in those items that are on the allowed-items list)
+# allowed-items: allowed materials to put into backpack if type is FILTERED
+# ^- If you want to add nbt do it like this: nbt:plugin:namespace=value (value must be of type String) eg: nbt:MMOItems:MMOITEMS_ITEM_TYPE=MATERIAL
+
+# owner-only: Can the backpack be opened only by its owner
+# description: backpack description show in backpack lore
+#   - <backpack_owner> = name of the backpack owner; if backpack is not used, use 'backpack-placeholders-defaults.backpack-owner-name'
+# show-content: Whether it should show the contents of the backpack
+backpack-tiers:
+  1:
+    displayName: "<#ffffff>Basic Backpack"
+    gui-title: "<shadow:#4c4941ff><bold><#f2e8cf>Viewing <#e3680e>Basic <#f2e8cf>Backpack</bold></shadow>"
+    backpack-skull-hash: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDk4MGQxNmVkMmYxZGJmOWExZDU0ZmFiZGU5MTY2MWU0NjJmOGU5ZmFjZWI2OWE3NTgxM2ZhYjg3Y2VkZmNmZiJ9fX0="
+    permission-craft: "backpackplus.craft.1"
+    permission-use: "backpackplus.use.1"
+    type: DEFAULT
+    can-be-crafted: true
+    is-skull: true
+    custom-model-id: 800001
+    size: 9
+    material: BROWN_DYE
+    crafting:
+      pattern: ['123','456','789']
+      ingredient:
+        1: leather
+        2: iron_ingot
+        3: leather
+        4: iron_ingot
+        5: chest
+        6: iron_ingot
+        7: iron_block
+        8: iron_ingot
+        9: iron_block
+    owner-only: false
+    allowed-items: []
+    description:
+      - "<#ffffff>Tough and <bold><#e3680e>Iron</bold> <#ffffff>bound, ideal for explorers."
+      - '%[(has_owner == true)<#555555>Crafted by: <#1cc2f6><backpack_owner> ~: <#555555>This backpack is unowned]%'
+    show-content: true
+  2:
+    displayName: "<#ffffff>Royal Backpack"
+    gui-title: "<shadow:#4c4941ff><bold><#f2e8cf>Viewing <#e0b715>Royal <#f2e8cf>Backpack</bold></shadow>"
+    backpack-skull-hash: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTliOTA2YjIxNTVmMTkzNzg3MDQyMzM4ZDA1Zjg0MDM5MWMwNWE2ZDNlODE2MjM5MDFiMjk2YmVlM2ZmZGQyIn19fQ=="
+    permission-craft: "backpackplus.craft.2"
+    permission-use: "backpackplus.use.2"
+    type: DEFAULT
+    can-be-crafted: true
+    is-skull: true
+    custom-model-id: 800002
+    size: 18
+    material: BROWN_DYE
+    crafting:
+      pattern: ['123','456','789']
+      ingredient:
+        1: leather
+        2: gold_ingot
+        3: leather
+        4: gold_ingot
+        5: chest
+        6: gold_ingot
+        7: gold_block
+        8: gold_ingot
+        9: gold_block
+    owner-only: false
+    allowed-items: []
+    description:
+      - "<bold><#E0B715>Gold</bold> <#ffffff>lined, Associated with nobility."
+      - '%[(has_owner == true)<#555555>Crafted by: <#1cc2f6><backpack_owner> ~: <#555555>This backpack is unowned]%'
+    show-content: true
+  3:
+    displayName: "<#ffffff>Traders Backpack"
+    gui-title: "<shadow:#4c4941ff><bold><#f2e8cf>Viewing <#00c2C6>Traders <#f2e8cf>backpack</bold></shadow>"
+    backpack-skull-hash: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjZhNjg4NmU4NGVhZTViYTJiMmI2MDI0MzI0MjljNmZiMjg2OTFmYzAyZTlmOWNjYjVjNTdmMmNkZDBmMWQ4In19fQ=="
+    permission-craft: "backpackplus.craft.3"
+    permission-use: "backpackplus.use.3"
+    type: DEFAULT
+    can-be-crafted: true
+    is-skull: true
+    custom-model-id: 800003
+    size: 27
+    material: BROWN_DYE
+    crafting:
+      pattern: ['123','456','789']
+      ingredient:
+        1: leather
+        2: diamond
+        3: leather
+        4: diamond
+        5: chest
+        6: diamond
+        7: diamond_block
+        8: diamond
+        9: diamond_block
+    owner-only: false
+    allowed-items: []
+    description:
+      - "<#ffffff>Woven with <bold><#00C2C6>Diamond</bold> <#ffffff>thread!"
+      - '%[(has_owner == true)<#555555>Crafted by: <#1cc2f6><backpack_owner> ~: <#555555>This backpack is unowned]%'
+    show-content: true
+  '4':
+    displayName: "<#ffffff>Mages Backpack"
+    # gui-title: "<shadow:#4c4941ff><bold><#f2e8cf>Viewing <#6c6264>Mages <#f2e8cf>Backpack</bold></shadow> %[(max_pages > 1)<#555555>[<#aaaaaa>%page%<#555555>/<#aaaaaa>%max_pages%<#555555>]]%"
+    gui-title: "<shadow:#4c4941ff><bold><#f2e8cf>Viewing <#6c6264>Mages <#f2e8cf>Backpack</bold></shadow>"
+    backpack-skull-hash: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTVhOTI1MjFlZDc3OTA0ZWI0NTAwMDUwYjc1NmVkY2NlNmE2MjA3YmFjNGVhMWM2ZjhiMzViNWY4NmE5YWJhNSJ9fX0="
+    permission-craft: "backpackplus.craft.4"
+    permission-use: "backpackplus.use.4"
+    type: DEFAULT
+    can-be-crafted: true
+    is-skull: true
+    custom-model-id: 800004
+    size: 90
+    material: BROWN_DYE
+    crafting:
+      pattern: [ '123','456','789' ]
+      ingredient:
+        1: leather
+        2: netherite_ingot
+        3: leather
+        4: netherite_ingot
+        5: chest
+        6: netherite_ingot
+        7: netherite_block
+        8: netherite_ingot
+        9: netherite_block
+    owner-only: true
+    allowed-items: []
+    description:
+      - "<#ffffff>Made of <bold><#6c6264>Netherite</bold> <#ffffff>shards imbued with dark magic!"
+      - '%[(has_owner == true)<#555555>Crafted by: <#1cc2f6><backpack_owner> ~: <#555555>This backpack is unowned]%'
+    show-content: true
+
+blocked-materials: [ ]
+blocked-items: [ ]
+
+# Should a player's backpacks remain in the inventory after his death
+keep-backpacks-after-death: false
+# What permissions must a player have in order for his backpacks to remain in the inventory after death? if it is empty permissions will not be required
+keep-backpacks-after-death-permission: "backpackplus.keep.backpacks"
+
+#  ██████╗░░█████╗░████████╗░█████╗░██████╗░░█████╗░░██████╗███████╗
+#  ██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔════╝
+#  ██║░░██║███████║░░░██║░░░███████║██████╦╝███████║╚█████╗░█████╗░░
+#  ██║░░██║██╔══██║░░░██║░░░██╔══██║██╔══██╗██╔══██║░╚═══██╗██╔══╝░░
+#  ██████╔╝██║░░██║░░░██║░░░██║░░██║██████╦╝██║░░██║██████╔╝███████╗
+#  ╚═════╝░╚═╝░░╚═╝░░░╚═╝░░░╚═╝░░╚═╝╚═════╝░╚═╝░░╚═╝╚═════╝░╚══════╝
+Database:
+  # Possible use: MySQL | SQLite | PostgreSQL
+  type: SQLite
+  # Host to your database if you are using MYSQL or PostgreSQL
+  host: localhost
+  # Port to your database if you are using MYSQL or PostgreSQL
+  port: 3306
+  # Username (login) for your database if you are using MYSQL or PostgreSQL
+  username: root
+  # Your database password if you are using MYSQL or PostgreSQL
+  password: ""
+  # Database name if you are using MYSQL or PostgreSQL
+  database: backpacks
+  # HikariCP settings for MySQL or PostgreSQL
+  hikari-settings:
+    # The maximum connection lifetime in milliseconds
+    max-lifetime-ms: 1800000
+    # The maximum number of connections in the pool
+    max-pool-size: 10
+    # The minimum number of idle connections in the pool to maintain, set to -1 to ignore
+    min-idle: 2
+    # The idle timeout in millisecond, set to -1 to ignore
+    idle-timeout-ms: 600000
+    # The connection leak detection threshold in milliseconds, set to -1 to ignore
+    leak-detection-threshold-ms: 2000
+    # Maximum time to wait for a connection from the pool (30 seconds)
+    connection-timeout-ms: 30000
+    # Maximum time to wait for connection validation (5 seconds)
+    validation-timeout-ms: 5000
+    # Maximum time to wait for pool initialization during startup (10 seconds)
+    initialization-fail-timeout-ms: 10000
+    # New: how often to ping idle connections; must be < max-lifetime (default ~120000)
+    keepalive-time-ms: 120000
+
+  mysql-settings:
+    # Modern TLS switch: overrides legacy flags below when set (DISABLED | PREFERRED | REQUIRED | VERIFY_CA | VERIFY_IDENTITY)
+    ssl-mode: VERIFY_IDENTITY
+    # Authorize client to retrieve RSA server public key.
+    # Advanced option, ignore if you don't know what it means.
+    allow-public-key-retrieval: true
+    # MySQL performance optimization settings
+    performance:
+      # Enable MySQL performance optimizations
+      # Recommended: true for better performance
+      enable-optimizations: true
+      # Enable prepared statement caching
+      cache-prep-stmts: true
+      # Maximum number of cached prepared statements
+      prep-stmt-cache-size: 250
+      # Maximum SQL length for caching (bytes)
+      # If you have many slots in your backpack above 100, I recommend increasing this option to: 4096 or even to 8192
+      prep-stmt-cache-sql-limit: 2048
+      # Use server-side prepared statements
+      use-server-prep-stmts: true
+      # Cache session state locally
+      use-local-session-state: true
+      # Rewrite batched statements for better performance
+      rewrite-batched-statements: true
+      # Cache result set metadata
+      cache-result-set-metadata: true
+      # Cache server configuration
+      cache-server-configuration: true
+      # Skip unnecessary setAutoCommit calls
+      elide-set-auto-commits: true
+      # Maintain timing statistics (disable for better performance)
+      maintain-time-stats: false
