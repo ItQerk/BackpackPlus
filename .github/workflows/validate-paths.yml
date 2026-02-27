@@ -1,0 +1,28 @@
+﻿name: Restrict PR Strictly
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            forbidden:
+              - '**'
+              - '!user_configs/**/*.yml'
+              - '!user_languages/**/*.yml'
+
+      - name: Fail if invalid files changed
+        if: steps.filter.outputs.forbidden == 'true'
+        run: |
+          echo "❌ Only .yml files inside user_configs/ or user_languages/ are allowed."
+          exit 1
