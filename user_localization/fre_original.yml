@@ -285,7 +285,21 @@ command-usage:
   backpack-block: "<dark_gray>/<white>backpack <aqua>block <gray><<white>main <gray>| <white>nom<gray>> <gray>[<<white>matériau<gray>>] <dark_gray>- <blue>Bloque un objet."
   # /backpack recipes | permission: backpackplus.view.recipes
   backpack-recipes: "<dark_gray>/<white>backpack <aqua>recipes <dark_gray>- <blue>Affiche les recettes."
+  # /backpack delete <backpack uuid> | permission: backpackplus.admin.backpack.delete
+  backpack-delete: "<dark_gray>/<white>backpack <aqua>delete <gray><<aqua>uuid du sac<gray>> <dark_gray>- <blue>Supprimer le sac de la base de données"
+  # /backpack remove owner | permission: backpackplus.remove.owner
+  backpack-remove-owner: "<dark_gray>/<white>backpack <aqua>remove <aqua>owner <dark_gray>- <blue>Prépare le sac pour le transfert de propriété"
+  # /backpack force transfer owner <backpack uuid> <player> | permission: backpackplus.admin.force.transfer.owner
+  backpack-force-transfer-owner: "<dark_gray>/<white>backpack <aqua>force transfer owner <gray><<aqua>uuid du sac à dos<gray>> <<aqua>joueur<gray>> <dark_gray>- <blue>Force le transfert de propriété du sac à dos"
+
   footer: "<dark_blue><strikethrough>--------------------<reset><yellow><bold>Backpack<gray><bold>Plus<reset><dark_blue><strikethrough>--------------------"
 
-# Message envoyé lorsqu'un joueur tente d'ouvrir son sac à dos pendant un combat.
-cannot-use-in-combat: "<red>Vous ne pouvez pas utiliser votre sac à dos en combat !"
+# Message envoyé lorsqu'un joueur tente d'ouvrir son sac pendant un combat.
+cannot-use-in-combat: "<red>Tu ne peux pas utiliser ton sac pendant le combat !"
+
+removed-backpack: "<green>Le sac <white><backpack_uuid> <green>a été supprimé avec succès de la base de données"
+prepare-transfer: "<gold>Sac préparé pour le transfert de propriété. Remets-le à un autre joueur maintenant"
+new-ownership: "<green>Tu es maintenant le nouveau propriétaire de ce sac ! Tu as un accès complet"
+not-backpack-in-main-hand: "<red>Tu dois tenir le sac dans ta main principale"
+backpack-not-removed: "<red>Impossible de supprimer le sac. Il n'existe peut-être pas ou l'UUID est invalide"
+admin-force-transfer-owner-success: "<green>La propriété du sac à dos <white><backpack_uuid> <green>a été transférée à <white><player>"

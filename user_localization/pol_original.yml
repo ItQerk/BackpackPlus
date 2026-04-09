@@ -280,7 +280,21 @@ command-usage:
   backpack-block: "<dark_gray>/<white>backpack <aqua>block <gray><<white>hand <gray>| <white>name<gray>> <gray>[<<white>nazwa materiału<gray>>] <dark_gray>- <blue>Dodaje przedmiot do listy zablokowanych"
   # /backpack recipes | uprawnienie: backpackplus.view.recipes
   backpack-recipes: "<dark_gray>/<white>backpack <aqua>recipes <dark_gray>- <blue>Pokazuje receptury plecaków"
+  # /backpack delete <backpack uuid> | permission: backpackplus.admin.backpack.delete
+  backpack-delete: "<dark_gray>/<white>backpack <aqua>delete <gray><<aqua>uuid plecaka<gray>> <dark_gray>- <blue>Usuń plecak z bazy danych"
+  # /backpack remove owner | permission: backpackplus.remove.owner
+  backpack-remove-owner: "<dark_gray>/<white>backpack <aqua>remove <aqua>owner <dark_gray>- <blue>Przygotowuje plecak do zmiany właściciela"
+  # /backpack force transfer owner <backpack uuid> <player> | permission: backpackplus.admin.force.transfer.owner
+  backpack-force-transfer-owner: "<dark_gray>/<white>backpack <aqua>force transfer owner <gray><<aqua>uuid plecaka<gray>> <<aqua>gracz<gray>> <dark_gray>- <blue>Wymusza zmianę właściciela plecaka"
+
   footer: "<dark_blue><strikethrough>--------------------<reset><yellow><bold>Backpack<gray><bold>Plus<reset><dark_blue><strikethrough>--------------------"
 
 # Wiadomość wysyłana, gdy gracz próbuje otworzyć plecak podczas walki.
 cannot-use-in-combat: "<red>Nie możesz używać plecaka podczas walki!"
+
+removed-backpack: "<green>Plecak <white><backpack_uuid> <green>został pomyślnie usunięty z bazy danych"
+prepare-transfer: "<gold>Plecak został przygotowany do zmiany właściciela. Przekaż go teraz innemu graczowi"
+new-ownership: "<green>Jesteś teraz nowym właścicielem tego plecaka! Masz do niego pełny dostęp"
+not-backpack-in-main-hand: "<red>Musisz trzymać plecak w głównej ręce"
+backpack-not-removed: "<red>Nie udało się usunąć plecaka. Może on nie istnieć w bazie danych lub UUID jest nieprawidłowe"
+admin-force-transfer-owner-success: "<green>Własność plecaka <white><backpack_uuid> <green>została zmieniona na <white><player>"

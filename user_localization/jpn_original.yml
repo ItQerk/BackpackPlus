@@ -263,7 +263,21 @@ command-usage:
   backpack-settings: "<dark_gray>/<white>backpack <aqua>settings <gray><<aqua>ティア<gray>> <dark_gray>- <blue>バックパックの設定を開きます。"
   backpack-block: "<dark_gray>/<white>backpack <aqua>block <gray><<white>hand <gray>| <white>名前<gray>> <gray>[<<white>素材名<gray>>] <dark_gray>- <blue>禁止アイテムリストに追加します。"
   backpack-recipes: "<dark_gray>/<white>backpack <aqua>recipes <dark_gray>- <blue>バックパックのレシピを表示します。"
+  # /backpack delete <backpack uuid> | permission: backpackplus.admin.backpack.delete
+  backpack-delete: "<dark_gray>/<white>backpack <aqua>delete <gray><<aqua>バックパックのUUID<gray>> <dark_gray>- <blue>データベースからバックパックを削除します"
+  # /backpack remove owner | permission: backpackplus.remove.owner
+  backpack-remove-owner: "<dark_gray>/<white>backpack <aqua>remove <aqua>owner <dark_gray>- <blue>バックパックの所有権譲渡の準備をします"
+  # /backpack force transfer owner <backpack uuid> <player> | permission: backpackplus.admin.force.transfer.owner
+  backpack-force-transfer-owner: "<dark_gray>/<white>backpack <aqua>force transfer owner <gray><<aqua>バックパック UUID<gray>> <<aqua>プレイヤー<gray>> <dark_gray>- <blue>バックパックの所有権を強制的に変更します"
+
   footer: "<dark_blue><strikethrough>--------------------<reset><yellow><bold>Backpack<gray><bold>Plus<reset><dark_blue><strikethrough>--------------------"
 
-# 戦闘中にプレイヤーがバックパックを開こうとしたときに送信されるメッセージ。
+# 戦闘中にバックパックを開こうとした時に送信されるメッセージ
 cannot-use-in-combat: "<red>戦闘中はバックパックを使用できません！"
+
+removed-backpack: "<green>バックパック <white><backpack_uuid> <green>はデータベースから正常に削除されました"
+prepare-transfer: "<gold>所有権譲渡の準備が完了しました。今すぐ他のプレイヤーに渡してください"
+new-ownership: "<green>あなたがこのバックパックの新しい所有者になりました！すべてのアクセス権限があります"
+not-backpack-in-main-hand: "<red>バックパックを利き手（メインハンド）に持ってください"
+backpack-not-removed: "<red>バックパックを削除できませんでした。データベースに存在しないか、UUIDが無効です"
+admin-force-transfer-owner-success: "<green>バックパック <white><backpack_uuid> <green>の所有権が <white><player> <green>に変更されました"

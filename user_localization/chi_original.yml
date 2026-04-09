@@ -276,7 +276,21 @@ command-usage:
   backpack-block: "<dark_gray>/<white>backpack <aqua>block <gray><<white>手持物品 <gray>| <white>名称<gray>> <gray>[<<white>材质名称<gray>>] <dark_gray>- <blue>将物品添加到封禁列表"
   # /backpack recipes
   backpack-recipes: "<dark_gray>/<white>backpack <aqua>recipes <dark_gray>- <blue>显示背包合成配方"
+  # /backpack delete <backpack uuid> | permission: backpackplus.admin.backpack.delete
+  backpack-delete: "<dark_gray>/<white>backpack <aqua>delete <gray><<aqua>背包 UUID<gray>> <dark_gray>- <blue>从数据库中删除背包"
+  # /backpack remove owner | permission: backpackplus.remove.owner
+  backpack-remove-owner: "<dark_gray>/<white>backpack <aqua>remove <aqua>owner <dark_gray>- <blue>准备转移背包所有权"
+  # /backpack force transfer owner <backpack uuid> <player> | permission: backpackplus.admin.force.transfer.owner
+  backpack-force-transfer-owner: "<dark_gray>/<white>backpack <aqua>force transfer owner <gray><<aqua>背包 UUID<gray>> <<aqua>玩家<gray>> <dark_gray>- <blue>强制更改背包所有者"
+
   footer: "<dark_blue><strikethrough>--------------------<reset><yellow><bold>Backpack<gray><bold>Plus<reset><dark_blue><strikethrough>--------------------"
 
 # 玩家在战斗中尝试打开背包时发送的消息。
 cannot-use-in-combat: "<red>战斗期间无法使用背包！"
+
+removed-backpack: "<green>背包 <white><backpack_uuid> <green>已成功从数据库中删除"
+prepare-transfer: "<gold>背包已准备好转移所有权。现在请将其交给另一位玩家"
+new-ownership: "<green>你现在是这个背包的新主人！你拥有它的全部访问权限"
+not-backpack-in-main-hand: "<red>你必须在主手中持有背包"
+backpack-not-removed: "<red>无法删除背包。数据库中可能不存在该背包，或 UUID 无效"
+admin-force-transfer-owner-success: "<green>背包 <white><backpack_uuid> <green>的所有权已更改为 <white><player>"

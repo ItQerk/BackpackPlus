@@ -262,7 +262,20 @@ command-usage:
   backpack-settings: "<dark_gray>/<white>backpack <aqua>settings <gray><<aqua>Tier<gray>> <dark_gray>- <blue>Öffnet Rucksack-Einstellungen."
   backpack-block: "<dark_gray>/<white>backpack <aqua>block <gray><<white>hand <gray>| <white>Name<gray>> <gray>[<<white>Material<gray>>] <dark_gray>- <blue>Blockiert Items."
   backpack-recipes: "<dark_gray>/<white>backpack <aqua>recipes <dark_gray>- <blue>Zeigt Rezepte."
+  # /backpack delete <backpack uuid> | permission: backpackplus.admin.backpack.delete
+  backpack-delete: "<dark_gray>/<white>backpack <aqua>delete <gray><<aqua>Rucksack-UUID<gray>> <dark_gray>- <blue>Rucksack aus der Datenbank löschen"
+  # /backpack remove owner | permission: backpackplus.remove.owner
+  backpack-remove-owner: "<dark_gray>/<white>backpack <aqua>remove <aqua>owner <dark_gray>- <blue>Bereitet den Rucksack auf den Besitzerwechsel vor"
+  # /backpack force transfer owner <backpack uuid> <player> | permission: backpackplus.admin.force.transfer.owner
+  backpack-force-transfer-owner: "<dark_gray>/<white>backpack <aqua>force transfer owner <gray><<aqua>Rucksack-UUID<gray>> <<aqua>Spieler<gray>> <dark_gray>- <blue>Erzwingt die Übertragung des Rucksack-Besitzes"
   footer: "<dark_blue><strikethrough>--------------------<reset><yellow><bold>Backpack<gray><bold>Plus<reset><dark_blue><strikethrough>--------------------"
 
-# Nachricht, die gesendet wird, wenn ein Spieler versucht, seinen Rucksack während des Kampfes zu öffnen.
-cannot-use-in-combat: "<red>Du kannst deinen Rucksack nicht während des Kampfes benutzen!"
+# Nachricht, wenn ein Spieler versucht, seinen Rucksack im Kampf zu öffnen.
+cannot-use-in-combat: "<red>Du kannst deinen Rucksack nicht während eines Kampfes benutzen!"
+
+removed-backpack: "<green>Rucksack <white><backpack_uuid> <green>wurde erfolgreich aus der Datenbank gelöscht"
+prepare-transfer: "<gold>Rucksack für Besitzerwechsel vorbereitet. Übergib ihn jetzt einem anderen Spieler"
+new-ownership: "<green>Du bist jetzt der neue Besitzer dieses Rucksacks! Du hast vollen Zugriff darauf"
+not-backpack-in-main-hand: "<red>Du musst den Rucksack in deiner Haupthand halten"
+backpack-not-removed: "<red>Rucksack konnte nicht gelöscht werden. Er existiert eventuell nicht in der Datenbank oder die UUID ist ungültig"
+admin-force-transfer-owner-success: "<green>Besitz des Rucksacks <white><backpack_uuid> <green>wurde auf <white><player> <green>geändert"

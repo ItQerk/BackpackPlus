@@ -262,7 +262,21 @@ command-usage:
   backpack-settings: "<dark_gray>/<white>backpack <aqua>settings <gray><<aqua>nivel<gray>> <dark_gray>- <blue>Abre ajustes de mochila."
   backpack-block: "<dark_gray>/<white>backpack <aqua>block <gray><<white>hand <gray>| <white>nombre<gray>> <gray>[<<white>material<gray>>] <dark_gray>- <blue>Bloquea objetos."
   backpack-recipes: "<dark_gray>/<white>backpack <aqua>recipes <dark_gray>- <blue>Muestra recetas de mochilas."
+  # /backpack delete <backpack uuid> | permission: backpackplus.admin.backpack.delete
+  backpack-delete: "<dark_gray>/<white>backpack <aqua>delete <gray><<aqua>uuid de la mochila<gray>> <dark_gray>- <blue>Eliminar mochila de la base de datos"
+  # /backpack remove owner | permission: backpackplus.remove.owner
+  backpack-remove-owner: "<dark_gray>/<white>backpack <aqua>remove <aqua>owner <dark_gray>- <blue>Prepara la mochila para la transferencia de propiedad"
+  # /backpack force transfer owner <backpack uuid> <player> | permission: backpackplus.admin.force.transfer.owner
+  backpack-force-transfer-owner: "<dark_gray>/<white>backpack <aqua>force transfer owner <gray><<aqua>uuid de mochila<gray>> <<aqua>jugador<gray>> <dark_gray>- <blue>Fuerza la transferencia de propiedad de la mochila"
+
   footer: "<dark_blue><strikethrough>--------------------<reset><yellow><bold>Backpack<gray><bold>Plus<reset><dark_blue><strikethrough>--------------------"
 
 # Mensaje enviado cuando un jugador intenta abrir su mochila durante el combate.
 cannot-use-in-combat: "<red>¡No puedes usar tu mochila durante el combate!"
+
+removed-backpack: "<green>La mochila <white><backpack_uuid> <green>ha sido eliminada con éxito de la base de datos"
+prepare-transfer: "<gold>Mochila preparada para la transferencia de propiedad. Entrégala a otro jugador ahora"
+new-ownership: "<green>¡Ahora eres el nuevo dueño de esta mochila! Tienes acceso total a ella"
+not-backpack-in-main-hand: "<red>Debes sostener la mochila en tu mano principal"
+backpack-not-removed: "<red>No se pudo eliminar la mochila. Es posible que no exista en la base de datos o que el UUID no sea válido"
+admin-force-transfer-owner-success: "<green>La propiedad de la mochila <white><backpack_uuid> <green>ha sido cambiada a <white><player>"

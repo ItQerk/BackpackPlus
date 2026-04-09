@@ -286,7 +286,20 @@ command-usage:
   backpack-block: "<dark_gray>/<white>backpack <aqua>block <gray><<white>hand <gray>| <white>name<gray>> <gray>[<<white>material name<gray>>] <dark_gray>- <blue>Adds item to list of blocked items"
   # /backpack recipes | permission: backpackplus.view.recipes
   backpack-recipes: "<dark_gray>/<white>backpack <aqua>recipes <dark_gray>- <blue>Shows backpack recipes"
+  # /backpack delete <backpack uuid> | permission: backpackplus.admin.backpack.delete
+  backpack-delete: "<dark_gray>/<white>backpack <aqua>delete <gray><<aqua>backpack uuid<gray>> <dark_gray>- <blue>Delete backpack from database"
+  # /backpack remove owner | permission: backpackplus.remove.owner
+  backpack-remove-owner: "<dark_gray>/<white>backpack <aqua>remove <aqua>owner <dark_gray>- <blue>Prepares the backpack for ownership transfer"
+  # /backpack force transfer owner <backpack uuid> <player> | permission: backpackplus.admin.force.transfer.owner
+  backpack-force-transfer-owner: "<dark_gray>/<white>backpack <aqua>force transfer owner <gray><<aqua>backpack uuid<gray>> <<aqua>player<gray>> <dark_gray>- <blue>Forcefully transfers backpack ownership"
   footer: "<dark_blue><strikethrough>--------------------<reset><yellow><bold>Backpack<gray><bold>Plus<reset><dark_blue><strikethrough>--------------------"
 
 # Message sent when a player tries to open their backpack during combat.
 cannot-use-in-combat: "<red>You cannot use your backpack during combat!"
+
+removed-backpack: "<green>Backpack <white><backpack_uuid> <green>has been successfully removed from the database"
+prepare-transfer: "<gold>Backpack prepared for ownership transfer. Hand it over to another player now"
+new-ownership: "<green>You are now the new owner of this backpack! You have full access to it"
+not-backpack-in-main-hand: "<red>You must hold the backpack in your main hand"
+backpack-not-removed: "<red>Could not remove backpack. It might not exist in the database or the UUID is invalid"
+admin-force-transfer-owner-success: "<green>Ownership of backpack <white><backpack_uuid> <green>has been changed to <white><player>"

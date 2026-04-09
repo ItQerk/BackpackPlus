@@ -162,12 +162,21 @@ use-skulls-backpack: false
 #  ██████╦╝██║░░██║╚█████╔╝██║░╚██╗██║░░░░░██║░░██║╚█████╔╝██║░╚██╗██████╔╝
 #  ╚═════╝░╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═╝░░░░░╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═════╝░
 
-# Block the possibility of having more than the set number(limit-backpack-per-inventory-amount) of backpacks in the inventory
-limit-backpack-per-inventory: false
-# Determines how many backpacks a player can have in inventory, must be enabled: limit-backpack-per-inventory
-limit-backpack-per-inventory-amount: 1
+# Block the possibility of having more than the set number of backpacks in the inventory
+limit-backpack-per-inventory:
+  # If true, the plugin will check and enforce the backpack limit for players
+  enable: false
+  # The default limit for players who do not have any specific permission from the list below
+  default-limit: 1
+  # Custom limits based on permissions.
+  # If a player has multiple permissions, the highest value will be granted.
+  # Format: "permission.node": limit_amount
+  permissions:
+    "backpack-limit-1": 1
+    "backpack-limit-2": 2
+    "backpack-limit-3": 3
 
-# Whether to prevent opening backpacks when interacting with interactive blocks like chests, doors, beds, etc.
+# If set to true, when a player holds a backpack and clicks an interactive block, the block's original interaction will be triggered instead of opening the backpack. This applies to materials listed under 'blocked-backpack-interaction-blocks'
 block-interaction-blocks-prevent-backpack-open: true
 
 # Whether to require permissions for a player to use backpacks (different for each tier)
@@ -175,6 +184,8 @@ permissions-to-use-backpack: false
 # Whether the craft of the backpack is to require the appropriate permission
 crafting-backpack-requires-permission: false
 
+# If the option is set to true, when a player closes the backpack and opens it again, it will stay on the same page
+keep-player-last-backpack-page: true
 # Should it block the possibility of placing backpacks in containers
 block-backpack-insert-containers: false
 # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/inventory/InventoryType.html
@@ -191,6 +202,19 @@ blocked-containers:
   - SMOKER
   - BLAST_FURNACE
   - FURNACE
+
+# While holding the backpack, clicking on a block will trigger the block's native interaction instead of opening the backpack
+blocked-backpack-interaction-blocks:
+  - CRAFTING_TABLE
+  - ENDER_CHEST
+  - ENCHANTING_TABLE
+  - ANVIL
+  - GRINDSTONE
+  - LOOM
+  - SMITHING_TABLE
+  - STONECUTTER
+  - CARTOGRAPHY_TABLE
+  - OAK_BUTTON
 
 # Should placing bundles in backpacks be possible?
 allow-bundles-in-backpacks: false

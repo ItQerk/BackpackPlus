@@ -276,7 +276,21 @@ command-usage:
   backpack-block: "<dark_gray>/<white>backpack <aqua>block <gray><<white>hand <gray>| <white>назва<gray>> <gray>[<<white>матеріал<gray>>] <dark_gray>- <blue>Додає предмет у чорний список"
   # /backpack recipes
   backpack-recipes: "<dark_gray>/<white>backpack <aqua>recipes <dark_gray>- <blue>Показує рецепти рюкзаків"
+  # /backpack delete <backpack uuid> | permission: backpackplus.admin.backpack.delete
+  backpack-delete: "<dark_gray>/<white>backpack <aqua>delete <gray><<aqua>uuid рюкзака<gray>> <dark_gray>- <blue>Видалити рюкзак із бази даних"
+  # /backpack remove owner | permission: backpackplus.remove.owner
+  backpack-remove-owner: "<dark_gray>/<white>backpack <aqua>remove <aqua>owner <dark_gray>- <blue>Підготовка рюкзака до зміни власника"
+  # /backpack force transfer owner <backpack uuid> <player> | permission: backpackplus.admin.force.transfer.owner
+  backpack-force-transfer-owner: "<dark_gray>/<white>backpack <aqua>force transfer owner <gray><<aqua>uuid рюкзака<gray>> <<aqua>гравець<gray>> <dark_gray>- <blue>Примусово змінити власника рюкзака"
+
   footer: "<dark_blue><strikethrough>--------------------<reset><yellow><bold>Backpack<gray><bold>Plus<reset><dark_blue><strikethrough>--------------------"
 
-# Повідомлення, яке надсилається, коли гравець намагається відкрити рюкзак під час бою.
+# Повідомлення, коли гравець намагається відкрити рюкзак під час бою.
 cannot-use-in-combat: "<red>Ви не можете використовувати рюкзак під час бою!"
+
+removed-backpack: "<green>Рюкзак <white><backpack_uuid> <green>успішно видалено з бази даних"
+prepare-transfer: "<gold>Рюкзак підготовлено до зміни власника. Передайте його іншому гравцеві зараз"
+new-ownership: "<green>Тепер ви новий власник цього рюкзака! Ви маєте до нього повний доступ"
+not-backpack-in-main-hand: "<red>Ви повинні тримати рюкзак у головній руці"
+backpack-not-removed: "<red>Не вдалося видалити рюкзак. Можливо, його немає в базі даних або UUID невірний"
+admin-force-transfer-owner-success: "<green>Власника рюкзака <white><backpack_uuid> <green>змінено на <white><player>"
