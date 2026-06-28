@@ -63,6 +63,11 @@ Gui:
       color: "Black"
       # Should it glow
       glow: false
+    skull:
+      # Whether this item should use a custom skull
+      is-skull: false
+      # Base64 skull texture hash
+      skull-hash: ''
     display-name: " "
     # Whether the tooltip should be hidden
     hide-tooltip: true
@@ -79,6 +84,11 @@ Gui:
       color: "Black"
       # Should it glow
       glow: false
+    skull:
+      # Whether this item should use a custom skull
+      is-skull: false
+      # Base64 skull texture hash
+      skull-hash: ''
     display-name: " "
     # Whether the tooltip should be hidden
     hide-tooltip: true
@@ -91,6 +101,11 @@ Gui:
       material: "MAP"
       # Custom Model Id
       custom-model-id: 810003
+    skull:
+      # Whether this item should use a custom skull
+      is-skull: false
+      # Base64 skull texture hash
+      skull-hash: ''
     display-name: "<dark_green><bold>→"
     # Whether the tooltip should be hidden
     hide-tooltip: false
@@ -103,6 +118,11 @@ Gui:
       material: "MAP"
       # Custom Model Id
       custom-model-id: 810002
+    skull:
+      # Whether this item should use a custom skull
+      is-skull: false
+      # Base64 skull texture hash
+      skull-hash: ''
     display-name: "<red><bold>←"
     # Whether the tooltip should be hidden
     hide-tooltip: false
